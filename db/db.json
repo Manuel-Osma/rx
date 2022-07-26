@@ -1,0 +1,54 @@
+{
+  "posts": [
+    {
+      "title": "manuel",
+      "author": "asas",
+      "id": 1
+    },
+    {
+      "title": "as",
+      "author": "as",
+      "id": 2
+    },
+    {
+      "title": "as",
+      "author": "as",
+      "id": 3
+    },
+    {
+      "title": "as",
+      "author": "as",
+      "id": 4
+    },
+    {
+      "title": "as",
+      "author": "as",
+      "id": 5
+    },
+    {
+      "title": "manuel",
+      "author": "os",
+      "id": 6
+    },
+    {
+      "author": "as",
+      "title": "asas",
+      "id": 7
+    },
+    {
+      "author": "lols",
+      "title": "jose ",
+      "id": 8
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

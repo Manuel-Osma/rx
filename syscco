@@ -1,0 +1,14 @@
+
+inicio(solo tiene terminos y condiciones)
+
+registro(
+  reportes:[
+    consilado tipificaciones,
+    detallado tipificaciones,
+    reportes titpificaciones,
+    visor detallado,
+    agendamiento(no se ha utilizado)
+  ]
+  tipificacion por campaña
+)
+informacion()
