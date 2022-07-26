@@ -72,13 +72,15 @@
   </div>
   <div class="mitad result">
     <h3>Resultado</h3>
-      <table class="table" *ngFor="let resp of resultado" >
+      <table class="table" *ngFor="let resp of resultado; let i = index" >
         <thead>
           <tr>
-            <th scope="col">id: {{ resp.id }}</th>
+            <th scope="col">id:    {{ resp.id }}</th>
             <th scope="col">titulo: {{ resp.title }}</th>
-            <th scope="col">autor: {{ resp.author}}</th>
+            <th scope="col">autor:   {{ resp.author}}</th>
+            <button class="btn btn-outline-danger" (click)="deleteItem(i)">Delete</button>
           </tr>
+
         </thead>
       </table>
   </div>

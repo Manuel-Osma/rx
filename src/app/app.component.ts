@@ -9,12 +9,17 @@ import { ServiceService } from './service/service.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title = 'rx'
   peticion = new PeticionEnvio();
   peticionPut = new PeticionEnvio();
   resultado!: Array<ResponseG>;
   id: number = 1;
-  constructor(private phttp: ServiceService) { }
-
+  constructor(private phttp: ServiceService) {
+    this.guardar()
+   }
+   guardar(){
+    localStorage.setItem('items', JSON.stringify(ResponseG))
+   }
   onSubmit(tipo: number) {
     switch ( tipo ) {
       case 1:
@@ -40,6 +45,7 @@ onchange($event) {
     this.phttp.getRespuesta().subscribe(
       data => {
         this.resultado = data;
+        localStorage.setItem('datos', JSON.stringify(this.resultado))
       },
       err => {
         console.log(err);
@@ -63,5 +69,11 @@ onchange($event) {
         this.resultado.push(data);
       }
     )
+  }
+
+  deleteItem(index:number){
+    this.resultado.splice(index,1)
+    localStorage.setItem('datos', JSON.stringify(this.resultado))
+    JSON.parse(localStorage.getItem('datos'))
   }
 }
